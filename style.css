@@ -72,7 +72,8 @@ img {
 }
 
 .site-nav a:hover {
-  color: #f4c2d7; /* ton rose */
+  color: #f4c2d7;
+  /* ton rose */
 }
 
 /* Dropdown container */
@@ -86,7 +87,8 @@ img {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #4b001f; /* fond bordeaux */
+  background: #4b001f;
+  /* fond bordeaux */
   min-width: 180px;
   border-radius: 8px;
   overflow: hidden;
@@ -103,7 +105,8 @@ img {
 }
 
 .dropdown-content a:hover {
-  background: #f4c2d7(0, 0, 0, 0.2); /* effet léger au survol */
+  background: #f4c2d7(0, 0, 0, 0.2);
+  /* effet léger au survol */
 }
 
 /* Affichage au survol */
@@ -146,10 +149,14 @@ img {
   margin: 0 auto;
   flex-wrap: wrap;
   /* responsive */
-   border: 2px solid #f4c2d7; /* ligne rose claire */
-  border-radius: 20px;         /* arrondi sur les coins */
-  padding: 30px;               /* espace intérieur */
-  max-width: 900px;            /* largeur max pour que ça reste joli */
+  border: 2px solid #f4c2d7;
+  /* ligne rose claire */
+  border-radius: 20px;
+  /* arrondi sur les coins */
+  padding: 30px;
+  /* espace intérieur */
+  max-width: 900px;
+  /* largeur max pour que ça reste joli */
 }
 
 .hero-image img {
@@ -184,11 +191,11 @@ img {
 
 /* BLOC INTRO RÉALISATIONS */
 .hero-cta {
-  color: #f4c2d7;      
+  color: #f4c2d7;
   font-weight: 400;
   font-style: italic;
-  margin-top: 16px;     
-  font-size: 1.05rem;    
+  margin-top: 16px;
+  font-size: 1.05rem;
   display: block;
 }
 
@@ -374,24 +381,30 @@ img {
   }
 
   .portfolio-category {
-    flex-shrink: 0;        /* empêche la carte de rétrécir */
-    width: 75%;            /* nouvelle largeur de la carte principale */
-    max-width: none;       /* annule la limite précédente */
+    flex-shrink: 0;
+    /* empêche la carte de rétrécir */
+    width: 75%;
+    /* nouvelle largeur de la carte principale */
+    max-width: none;
+    /* annule la limite précédente */
   }
 }
 
 .portfolio-categories::-webkit-scrollbar {
-  display: none; /* cache la barre de scroll */
+  display: none;
+  /* cache la barre de scroll */
 }
 
 
 @media (max-width: 768px) {
   .category-title h2 {
-    font-size: 0.9rem; /* un peu plus petit que sur desktop */
+    font-size: 0.9rem;
+    /* un peu plus petit que sur desktop */
   }
 
   .category-title p {
-    font-size: 0.7rem; /* texte descriptif plus petit */
+    font-size: 0.7rem;
+    /* texte descriptif plus petit */
   }
 }
 
@@ -502,8 +515,9 @@ img {
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
-  z-index: 10; /* croix au-dessus de la vidéo */
-  background: rgba(0,0,0,0.5);
+  z-index: 10;
+  /* croix au-dessus de la vidéo */
+  background: rgba(0, 0, 0, 0.5);
   padding: 5px 10px;
   border-radius: 5px;
 }
@@ -515,22 +529,32 @@ img {
 }
 
 /* ===== RESPONSIVE MOBILE (hover: none) ===== */
-@media (hover: none), (max-width: 768px) {
+@media (hover: none),
+(max-width: 768px) {
+
   /* Lien propre : plus de souligné violet */
   .project-card a {
     text-decoration: none;
-    color: inherit; /* reprend la couleur du parent */
-    -webkit-tap-highlight-color: transparent; /* enlève le surligné sur mobile */
+    color: inherit;
+    /* reprend la couleur du parent */
+    -webkit-tap-highlight-color: transparent;
+    /* enlève le surligné sur mobile */
   }
 
   /* Overlay repositionné sous l'image/vidéo */
   .project-card .overlay {
-    position: relative;       /* plus absolute */
-    inset: auto;              /* annule inset:0 */
-    background: none;         /* plus de fond bordeaux */
-    color: #f4c2d7;           /* rose clair */
-    opacity: 1;               /* texte visible en permanence */
-    padding: 8px 0;           /* espace autour du texte */
+    position: relative;
+    /* plus absolute */
+    inset: auto;
+    /* annule inset:0 */
+    background: none;
+    /* plus de fond bordeaux */
+    color: #f4c2d7;
+    /* rose clair */
+    opacity: 1;
+    /* texte visible en permanence */
+    padding: 8px 0;
+    /* espace autour du texte */
     text-align: center;
   }
 
@@ -549,11 +573,15 @@ img {
   .project-card img,
   .video-card video {
     width: 100%;
-    height: auto;               /* permet de ne rien couper */
-    border-radius: 10px 10px 0 0; /* coins arrondis en haut */
-    object-fit: contain;        /* tout le média visible */
+    height: auto;
+    /* permet de ne rien couper */
+    border-radius: 10px 10px 0 0;
+    /* coins arrondis en haut */
+    object-fit: contain;
+    /* tout le média visible */
     display: block;
-    margin-bottom: 0.5rem;      /* espace entre média et texte */
+    margin-bottom: 0.5rem;
+    /* espace entre média et texte */
   }
 
   /* Grille adaptée pour petit écran */
@@ -585,11 +613,12 @@ img {
   text-align: left;
 }
 
-/* Galerie 3 colonnes fixes */
+/* Galerie responsive */
 .photo-gallery {
   display: grid;
   gap: 10px;
-  grid-template-columns: repeat(3, 1fr); /* toujours 3 colonnes */
+  grid-template-columns: repeat(3, 1fr);
+  /* toujours 3 colonnes sur grand écran */
 }
 
 .photo-gallery a {
@@ -598,7 +627,8 @@ img {
 
 .photo-gallery img {
   width: 100%;
-  aspect-ratio: 1 / 1; /* carré */
+  aspect-ratio: 1 / 1;
+  /* carré */
   object-fit: cover;
   transition: transform 0.3s ease;
 }
@@ -647,23 +677,24 @@ img {
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .photo-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes sur écran moyen */
+  }
+}
+
 @media (max-width: 768px) {
   .photo-gallery {
-    grid-template-columns: repeat(3, 1fr); /* fixe 3 colonnes aussi sur tablette */
-  }
-
-  .photo-gallery img {
-    aspect-ratio: 1 / 1;
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colonnes sur tablette */
   }
 }
 
 @media (max-width: 480px) {
   .photo-gallery {
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur tout mobile */
-  }
-
-  .photo-gallery img {
-    aspect-ratio: 1 / 1;
+    grid-template-columns: 1fr;
+    /* 1 colonne sur mobile */
   }
 }
 
@@ -798,7 +829,9 @@ img {
 }
 
 /* RESPONSIVE */
-@media (hover: none), (max-width: 768px) {
+@media (hover: none),
+(max-width: 768px) {
+
   /* Texte sous l'image toujours visible */
   .creative-card .overlay {
     position: relative;
@@ -811,12 +844,14 @@ img {
   }
 
   .creative-card .overlay h3 {
-    font-size: 0.95rem; /* légèrement plus petit */
+    font-size: 0.95rem;
+    /* légèrement plus petit */
     margin-bottom: 4px;
   }
 
   .creative-card .overlay p {
-    font-size: 0.8rem; /* lisible mais plus petit */
+    font-size: 0.8rem;
+    /* lisible mais plus petit */
     margin: 0;
   }
 
@@ -825,7 +860,7 @@ img {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.9);
+    background: rgba(0, 0, 0, 0.9);
     z-index: 9999;
     padding: 10px;
     text-align: center;
@@ -839,7 +874,8 @@ img {
   .creative-lightbox img {
     max-width: 90vw;
     max-height: 80vh;
-    margin: 40px auto; /* espace au-dessus pour la croix */
+    margin: 40px auto;
+    /* espace au-dessus pour la croix */
     object-fit: contain;
   }
 
@@ -1138,14 +1174,16 @@ img {
 /* H2 responsive */
 @media (max-width: 768px) {
   .photo-section h2 {
-    font-size: 1.3rem; /* un peu plus petit que sur desktop */
+    font-size: 1.3rem;
+    /* un peu plus petit que sur desktop */
     margin-bottom: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .photo-section h2 {
-    font-size: 1.1rem; /* idéal pour petits écrans type iPhone SE */
+    font-size: 1.1rem;
+    /* idéal pour petits écrans type iPhone SE */
     margin-bottom: 0.6rem;
   }
 }

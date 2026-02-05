@@ -1,0 +1,1151 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.site-header {
+  position: relative;
+  padding: 30px 40px;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+
+  position: relative;
+}
+
+/* GLOBAL */
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: black;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: #f4c2d7;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* LOGO CENTRÉ */
+.site-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 60px;
+}
+
+/* Menu principal */
+.site-nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Liens du menu */
+.site-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  position: relative;
+  padding: 6px 4px;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover {
+  color: #f4c2d7; /* ton rose */
+}
+
+/* Dropdown container */
+.nav-dropdown {
+  position: relative;
+}
+
+/* Contenu du dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #4b001f; /* fond bordeaux */
+  min-width: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  flex-direction: column;
+  z-index: 10;
+}
+
+/* Liens dans le dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 10px 16px;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background: #f4c2d7(0, 0, 0, 0.2); /* effet léger au survol */
+}
+
+/* Affichage au survol */
+.nav-dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* BANDE DEMO */
+.demo-video video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+/* ===== HERO / QUI SUIS-JE ===== */
+
+.hero {
+  padding: 60px 20px;
+
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  /* responsive */
+   border: 2px solid #f4c2d7; /* ligne rose claire */
+  border-radius: 20px;         /* arrondi sur les coins */
+  padding: 30px;               /* espace intérieur */
+  max-width: 900px;            /* largeur max pour que ça reste joli */
+}
+
+.hero-image img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* photo ronde */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.05);
+}
+
+.hero-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.hero-text h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+/* BLOC INTRO RÉALISATIONS */
+.hero-cta {
+  color: #f4c2d7;      
+  font-weight: 400;
+  font-style: italic;
+  margin-top: 16px;     
+  font-size: 1.05rem;    
+  display: block;
+}
+
+/* TITRES DES RÉALISATIONS */
+.realisations-title {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #f4c2d7;
+  margin-bottom: 20px;
+}
+
+/* CTA BUTTON au centre */
+.cta-wrapper {
+  text-align: center;
+  margin: 60px 0 0px;
+}
+
+.cta-button {
+  display: inline-block;
+  background: #4b001f;
+  color: #f4c2d7;
+  padding: 14px 32px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #f4c2d7;
+  color: #4b001f;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    gap: 16px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 30px 15px;
+  }
+
+  .hero-image img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-text h3 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+  .hero-cta {
+    font-size: 0.95rem;
+    margin-top: 12px;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .presentation-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.video iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+}
+
+
+/* ===== CATEGORIES PORTFOLIO ===== */
+.realisations-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Grille des catégories */
+.portfolio-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  /* 1fr pour que toutes soient égales */
+  gap: 14px;
+  justify-items: center;
+}
+
+/* ===== CARTES PORTFOLIO ===== */
+.portfolio-category {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+  text-decoration: none;
+  color: white;
+  max-width: 320px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Wrapper images pour superposition bw/color */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  flex-shrink: 0;
+  /* empêche l’image de rétrécir si le texte prend plus de place */
+}
+
+.img-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.5s ease, transform 0.4s ease;
+  z-index: 1;
+}
+
+/* Image couleur cachée par défaut */
+.img-wrapper img.color {
+  opacity: 0;
+}
+
+/* Hover : zoom et apparition de la couleur */
+.portfolio-category:hover .img-wrapper img.color {
+  opacity: 1;
+}
+
+/* Texte en bas de l’image */
+.category-title {
+  background: #4b001f;
+  /* voile léger */
+  padding: 12px;
+  text-align: center;
+}
+
+.category-title h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #f4c2d7;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .portfolio-intro {
+    margin-bottom: 40px;
+  }
+}
+
+@media (hover: none) {
+  .img-wrapper img.bw {
+    opacity: 0;
+  }
+
+  .img-wrapper img.color {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-categories {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding-left: 16px;
+  }
+
+  .portfolio-category {
+    flex-shrink: 0;        /* empêche la carte de rétrécir */
+    width: 75%;            /* nouvelle largeur de la carte principale */
+    max-width: none;       /* annule la limite précédente */
+  }
+}
+
+.portfolio-categories::-webkit-scrollbar {
+  display: none; /* cache la barre de scroll */
+}
+
+
+@media (max-width: 768px) {
+  .category-title h2 {
+    font-size: 0.9rem; /* un peu plus petit que sur desktop */
+  }
+
+  .category-title p {
+    font-size: 0.7rem; /* texte descriptif plus petit */
+  }
+}
+
+
+/* PROJECTS */
+
+/* --- Section Clips & Portfolio --- */
+.portfolio {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Grille des petits clips */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.1);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: #4b001f;
+  /* bordeaux plein comme avant */
+  color: #f4c2d7;
+  /* rose */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-category .overlay h2 {
+  color: #f4c2d7;
+  margin-bottom: 10px;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.project-card video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  /* ou 16/9 selon ton format */
+  object-fit: cover;
+  display: block;
+}
+
+.video-card video {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 9 / 16;
+  /* reels */
+  object-fit: cover;
+  display: block;
+}
+
+.project-card a {
+  display: block;
+  position: relative;
+}
+
+.project-card .overlay {
+  pointer-events: none;
+}
+
+
+.lightbox video {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+}
+
+.lightbox .close-video {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10; /* croix au-dessus de la vidéo */
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.portfolio .click-instruction {
+  margin-bottom: 0rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE MOBILE (hover: none) ===== */
+@media (hover: none), (max-width: 768px) {
+  /* Lien propre : plus de souligné violet */
+  .project-card a {
+    text-decoration: none;
+    color: inherit; /* reprend la couleur du parent */
+    -webkit-tap-highlight-color: transparent; /* enlève le surligné sur mobile */
+  }
+
+  /* Overlay repositionné sous l'image/vidéo */
+  .project-card .overlay {
+    position: relative;       /* plus absolute */
+    inset: auto;              /* annule inset:0 */
+    background: none;         /* plus de fond bordeaux */
+    color: #f4c2d7;           /* rose clair */
+    opacity: 1;               /* texte visible en permanence */
+    padding: 8px 0;           /* espace autour du texte */
+    text-align: center;
+  }
+
+  /* Titres et paragraphes ajustés */
+  .project-card .overlay h3 {
+    font-size: 1rem;
+    margin: 4px 0;
+  }
+
+  .project-card .overlay p {
+    font-size: 0.85rem;
+    margin: 2px 0 0 0;
+  }
+
+  /* Images et vidéos : coins arrondis en haut seulement + hauteur auto pour éviter coupure */
+  .project-card img,
+  .video-card video {
+    width: 100%;
+    height: auto;               /* permet de ne rien couper */
+    border-radius: 10px 10px 0 0; /* coins arrondis en haut */
+    object-fit: contain;        /* tout le média visible */
+    display: block;
+    margin-bottom: 0.5rem;      /* espace entre média et texte */
+  }
+
+  /* Grille adaptée pour petit écran */
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Texte de la notice cliquable */
+  .click-instruction {
+    font-size: 0.85rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+/* GALERIE PHOTOS */
+.photo-section {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.photo-section h2 {
+  color: #f4c2d7;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+/* Galerie 3 colonnes fixes */
+.photo-gallery {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr); /* toujours 3 colonnes */
+}
+
+.photo-gallery a {
+  display: block;
+}
+
+.photo-gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* carré */
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.photo-gallery img:hover {
+  transform: scale(1.05);
+}
+
+.photo-section .click-instruction {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* LIGHTBOX */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+  z-index: 9999;
+}
+
+.lightbox:target {
+  display: flex;
+}
+
+.lightbox img {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.lightbox a {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr); /* fixe 3 colonnes aussi sur tablette */
+  }
+
+  .photo-gallery img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur tout mobile */
+  }
+
+  .photo-gallery img {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+
+/* ==== GALERIE CREATIONS VISUELLES ==== */
+.creative-gallery {
+  max-width: 1200px;
+  margin: 0 auto 3rem;
+  padding: 0 1rem;
+}
+
+.creative-gallery .click-instruction {
+  text-align: center;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Grille intelligente */
+.creative-masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-auto-flow: dense;
+  gap: 14px;
+}
+
+/* Cartes */
+.creative-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+/* Images */
+.creative-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Overlay */
+.creative-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: #4b001f;
+  color: #f4c2d7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.creative-card:hover .overlay {
+  opacity: 1;
+}
+
+.creative-card .overlay h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.creative-card .overlay p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+
+/* LIGHTBOX */
+.creative-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  padding: 40px 20px;
+  overflow-y: auto;
+}
+
+.creative-lightbox:target {
+  display: block;
+}
+
+/* Contenu du carrousel */
+.creative-lightbox img {
+  display: block;
+  max-width: 90vw;
+  max-height: 90vh;
+  margin: 0 auto 30px;
+  object-fit: contain;
+}
+
+/* Croix */
+.creative-lightbox .close {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  z-index: 10000;
+}
+
+/* Flèches navigation lightbox */
+.creative-lightbox .nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  color: white;
+  text-decoration: none;
+  opacity: 0.7;
+  z-index: 10000;
+  padding: 10px;
+}
+
+.creative-lightbox .nav:hover {
+  opacity: 1;
+}
+
+/* gauche */
+.creative-lightbox .prev {
+  left: 20px;
+}
+
+/* droite */
+.creative-lightbox .next {
+  right: 20px;
+}
+
+/* RESPONSIVE */
+@media (hover: none), (max-width: 768px) {
+  /* Texte sous l'image toujours visible */
+  .creative-card .overlay {
+    position: relative;
+    inset: auto;
+    background: none;
+    color: #f4c2d7;
+    opacity: 1;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .creative-card .overlay h3 {
+    font-size: 0.95rem; /* légèrement plus petit */
+    margin-bottom: 4px;
+  }
+
+  .creative-card .overlay p {
+    font-size: 0.8rem; /* lisible mais plus petit */
+    margin: 0;
+  }
+
+  /* LIGHTBOX */
+  .creative-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    z-index: 9999;
+    padding: 10px;
+    text-align: center;
+    overflow-y: auto;
+  }
+
+  .creative-lightbox:target {
+    display: block;
+  }
+
+  .creative-lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    margin: 40px auto; /* espace au-dessus pour la croix */
+    object-fit: contain;
+  }
+
+  /* Croix */
+  .creative-lightbox .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    z-index: 10000;
+  }
+
+  /* Flèches navigation */
+  .creative-lightbox .nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    color: white;
+    opacity: 0.7;
+    z-index: 10000;
+    padding: 8px;
+  }
+
+  .creative-lightbox .nav:hover {
+    opacity: 1;
+  }
+
+  .creative-lightbox .prev {
+    left: 10px;
+  }
+
+  .creative-lightbox .next {
+    right: 10px;
+  }
+}
+
+/* CONTACT */
+.contact-page {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-page h1 {
+  color: #f4c2d7;
+  /* rose clair */
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.contact-page p {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.contact-page form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-page label {
+  text-align: left;
+  color: #f4c2d7;
+  font-weight: 600;
+}
+
+.contact-page input,
+.contact-page textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.contact-page input:focus,
+.contact-page textarea:focus {
+  outline: 2px solid #4b001f;
+  /* bordeaux */
+}
+
+.contact-page button {
+  padding: 14px 0;
+  border-radius: 30px;
+  border: none;
+  background-color: #4b001f;
+  /* bordeaux */
+  color: #f4c2d7;
+  /* rose clair */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-page button:hover {
+  background-color: #f4c2d7;
+  color: #4b001f;
+}
+
+/* Responsive mobile contact */
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 0 10px;
+  }
+
+  .contact-page h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .contact-page p {
+    margin-bottom: 25px;
+    font-size: 0.95rem;
+  }
+
+  .contact-page input,
+  .contact-page textarea {
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+
+  .contact-page button {
+    padding: 12px 0;
+    font-size: 0.95rem;
+  }
+}
+
+/* FOOTER */
+.site-footer {
+  background: #4b001f;
+  color: #f4c2d7;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  font-family: sans-serif;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  /* centre verticalement le contenu */
+  position: relative;
+  /* pour positionner les côtés */
+}
+
+/* Colonnes gauche et droite en position absolue */
+.footer-left {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.footer-right {
+  position: absolute;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+/* Centre bien centré */
+.footer-center {
+  margin: 0 auto;
+  /* centre horizontalement */
+  text-align: center;
+}
+
+/* Réseaux sociaux */
+.footer-left a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #f4c2d7;
+  text-decoration: none;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.footer-left a:hover {
+  opacity: 1;
+}
+
+/* Texte central */
+.footer-name {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-role {
+  font-size: 0.9rem;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+/* Mail et copyright */
+.footer-right a {
+  color: #f4c2d7;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  opacity: 0.6;
+  margin-top: 0.5rem;
+}
+
+/* Icônes réseaux dans le footer */
+.footer-left a {
+  display: inline-flex;
+  /* permet d’aligner l’icône correctement */
+  align-items: center;
+  gap: 0.4rem;
+  /* <-- espace entre l'icône et le texte */
+  margin-right: 0.5rem;
+  /* espace entre les icônes */
+  color: #f4c2d7;
+  /* même couleur que ton texte */
+  text-decoration: none;
+  transition: transform 0.2s, color 0.2s;
+}
+
+/* Taille des SVG */
+.footer-left a svg {
+  width: 1em;
+  /* taille identique au texte */
+  height: 1em;
+  fill: currentColor;
+  /* prend la couleur du lien */
+}
+
+/* RESPONSIVE */
+/* header */
+@media (max-width: 768px) {
+
+  .header-inner {
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .site-logo {
+    position: static;
+    transform: none;
+    height: 50px;
+  }
+
+}
+
+/* menu */
+@media (max-width: 768px) {
+  .site-nav {
+    flex-direction: row;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .nav-dropdown .dropdown-content {
+    display: none !important;
+  }
+}
+
+/* footer */
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 24px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    position: static;
+    text-align: center;
+  }
+
+  .footer-left a {
+    justify-content: center;
+  }
+
+}
+
+/* H2 responsive */
+@media (max-width: 768px) {
+  .photo-section h2 {
+    font-size: 1.3rem; /* un peu plus petit que sur desktop */
+    margin-bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-section h2 {
+    font-size: 1.1rem; /* idéal pour petits écrans type iPhone SE */
+    margin-bottom: 0.6rem;
+  }
+}
